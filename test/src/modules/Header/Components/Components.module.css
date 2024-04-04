@@ -1,0 +1,132 @@
+
+.logoContainer {
+    margin-left: 20px;
+    width: 185px;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer:hover {
+    cursor: pointer;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+}
+
+.title {
+    display: block;
+    color: white;
+    width: 128px;
+    height: 33px;
+    align-content: center;
+    text-align: center;
+}
+
+.iconsContainer {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dotaContainer {
+    background: rgb(255,0,0);
+    background: radial-gradient(circle, rgba(255,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100%;
+}
+
+.lolContainer {
+    background: rgb(0,117,255);
+    background: radial-gradient(circle, rgba(0,117,255,0.5) 0%, rgba(0,0,0,0.5) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;   
+    height: 100%;
+}
+
+.dotaContainer:hover {
+    cursor: pointer;
+}
+
+.lolContainer:hover {
+    cursor: pointer
+}
+
+.userMenuContainer {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    background-image: url('./Images/Avatar.png');
+    background-size: cover;
+}
+
+.avatar:hover {
+    cursor: pointer;
+}
+
+.userLevel {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    align-self: flex-end;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settingBtn {
+    width: 35px;
+    height: 35px;
+    color: #F8F8F8;
+    margin-left: 20px;
+    transition: 0.2s ease;
+}
+
+.settingBtn:hover {
+    cursor: pointer;
+    color: #d1cfcf;
+}
+
+
+.authBtn {
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.2s ease;
+    background-color: rgb(42, 42, 67);
+}
+
+.authBtn:hover {
+    cursor: pointer;
+    background-color: rgb(35, 35, 56);
+}
+
+.authBtn:active {
+    width: 95px;
+    height: 38px;
+    font-size: 15.2px;
+}
