@@ -1,10 +1,13 @@
 import React from "react";
 import styles from  './SignIn.module.css'
+
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import { useAppDispatch, useAppSelector } from "../../../../hooks/redux.ts";
 import { formSlice } from "../../../../store/reducers/RegistrationFormSlice.ts";
 
+
 export const SignIn: React.FC = () => {
+
     
     const [show, setShow] = React.useState(false)
     const handleClick = () => setShow(!show)
@@ -26,11 +29,13 @@ export const SignIn: React.FC = () => {
         password: "",
         password2: ""
     })
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const name = event.target.name
         const value = event.target.value
         setFormData(formData => ({...formData, [name]: value}))
     }
+
     const resetForm = () => {
         dispatch(swap())
         setFormData(prevState => ({

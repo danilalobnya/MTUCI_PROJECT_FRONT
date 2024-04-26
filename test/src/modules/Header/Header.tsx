@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
         <div className = {styles.wrapper} >
             <HeaderLogo/>
             <PagesIcons/>
-            <NotAuthUserMenu></NotAuthUserMenu>
+            <NotAuthUserMenu/>
         </div>
 
     )

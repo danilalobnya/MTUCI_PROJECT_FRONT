@@ -45,6 +45,7 @@
     height: 100%;
 }
 
+
 .lolContainer {
     background: rgb(0,117,255);
     background: radial-gradient(circle, rgba(0,117,255,0.5) 0%, rgba(0,0,0,0.5) 100%);
@@ -57,10 +58,14 @@
 
 .dotaContainer:hover {
     cursor: pointer;
+    background: rgb(255,0,0);
+    background: radial-gradient(circle, rgba(255,0,0,0.6) 0%, rgba(0,0,0,0.5) 100%);
 }
 
 .lolContainer:hover {
-    cursor: pointer
+    cursor: pointer;
+    background: rgb(0,117,255);
+    background: radial-gradient(circle, rgba(0,117,255,0.6) 0%, rgba(0,0,0,0.5) 100%);
 }
 
 .userMenuContainer {

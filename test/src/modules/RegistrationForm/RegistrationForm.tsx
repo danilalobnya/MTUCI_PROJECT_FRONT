@@ -5,6 +5,7 @@ import { SignIn } from './Components/SignIn/SignIn.tsx';
 import { registrationSlice } from '../../store/reducers/RegistrationSlice.ts';
 import { useAppDispatch } from '../../hooks/redux.ts';
 import useRemoveForm from '../../hooks/removeForm.ts';
+import  {animate, motion} from "framer-motion"
 
 
 export const RegistrationForm: React.FC = () => {
@@ -17,12 +18,13 @@ export const RegistrationForm: React.FC = () => {
 
     return (
     
-        <div className = {styles.wrapper}>
+        <motion.div className = {styles.wrapper} initial = {{opacity:0}} animate = {{opacity: 1}} transition={{duration: 0.2}}>
             <div className= {styles.container} ref  = {ref}>
+                
                 <SignIn/>
                 <LogIn/>
             </div>
-        </div>
+        </motion.div>
 
     )
 }
