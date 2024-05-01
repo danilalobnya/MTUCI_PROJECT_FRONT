@@ -39,7 +39,7 @@ export const LogIn: React.FC = () => {
     return (
 
         <div className={styles.wrapper} > 
-        <div className={styles.logInCaontainer} >
+        <div className={styles.logInCaontainer} style={{opacity: toogled? '0' : '1'}}>
             <div className={styles.logIn} style = {{left: toogled ? '100%' : '0%'}}>
                 <span className= {styles.title}>Рады видеть вас!</span>
 
@@ -60,7 +60,7 @@ export const LogIn: React.FC = () => {
         </div>   
 
             <div className={styles.toogleMenu}>
-                <div className={styles.toogle} style = {{right: toogled ? '100%' : '0%'} }>
+                <div className={styles.toogle} style = {{left: toogled ? '100%' : '0%'}}>
                 </div>
             </div>
 

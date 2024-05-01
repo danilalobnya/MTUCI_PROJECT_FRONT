@@ -54,11 +54,11 @@ export const SignIn: React.FC = () => {
         <div className={styles.wrapper} style = {{position: 'absolute'}}> 
 
             <div className={styles.toogleMenu} style = {{opacity: toogled ? '1' : '0'}}>
-                <div className={styles.toogle} style = {{left: toogled ? '0%' : '100%'}}>
+                <div className={styles.toogle} style = {{right: toogled ? '0%' : '100%'}}>
                 </div>
             </div>
 
-        <div className={styles.logInCaontainer}>
+        <div className={styles.logInCaontainer} style={{opacity: toogled ? '1' : '0'}}>
             <div className={styles.logIn} style = {{right: toogled ? '0%' : '100%'}}>
                 <span className= {styles.title}>Рады видеть вас!</span>
                 <input className={styles.inputName} name = "name" value={formData.name} onChange={handleChange} placeholder='Name'></input>
