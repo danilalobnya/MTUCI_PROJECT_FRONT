@@ -60,7 +60,7 @@ export const LogIn: React.FC = () => {
         </div>   
 
             <div className={styles.toogleMenu}>
-                <div className={styles.toogle} style = {{left: toogled ? '100%' : '0%'}}>
+                <div className={styles.toogle} style = {{left: toogled ? '100%' : '0%', opacity: toogled ? '0' : '1'}}>
                 </div>
             </div>
 
