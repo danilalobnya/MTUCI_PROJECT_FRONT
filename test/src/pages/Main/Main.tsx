@@ -6,7 +6,7 @@ import { MainText } from '../../modules/MainPage/Components/MainText.tsx';
 import { UpperIcons } from '../../modules/MainPage/Components/UpperIcons.tsx';
 import { LowerIcons } from './../../modules/MainPage/Components/LowerIcons.tsx';
 import { Links } from './../../modules/MainPage/Components/Links.tsx';
-import { News } from '../../components/NewsCarousel/News.tsx';
+import { News } from './../../components/NewsCarousel/News.tsx'
 
 
 export const Main: React.FC = () => {
@@ -16,7 +16,7 @@ export const Main: React.FC = () => {
         <div className={styles.mainpage}>
             <Header />
             <UpperText />
-            {/* <News />  */}
+            <News /> 
             <MainText />
             <UpperIcons />
             <LowerIcons />
