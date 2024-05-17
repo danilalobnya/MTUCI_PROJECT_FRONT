@@ -31,13 +31,14 @@ export const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
     const xTranslation = useMotionValue(0);
 
     React.useEffect(() => {
-        let len = props.items.length
+        const len = props.items.length
+        var speed = props.speed
         let controls;
         let finalPosition =  -width * len 
 
         controls = animate(xTranslation, props.side === 'left' ?  [0, finalPosition] : [finalPosition, 0],{
             ease: 'linear',
-            duration: props.speed,
+            duration: speed,
             repeat: Infinity,
             repeatType: 'loop',
             repeatDelay: 0,
@@ -49,7 +50,8 @@ export const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
     return (
     
 
-        <div className = {styles.wrapper} >
+    <div className = {styles.wrapper} >
+        <div className = {styles.container}>
             <div className={styles.leftShadow}/>
             <div className={styles.carouselContainer}>
                 {props.items.map(item => <motion.li ref = {ref} key = {item.name} style = {{x: xTranslation}}><CarouselItem image = {item.image} name = {item.name} /></motion.li>)}
@@ -57,6 +59,7 @@ export const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
             </div>
             <div className={styles.rigthShadow}/>
         </div>
+    </div>
 
     )   
 }

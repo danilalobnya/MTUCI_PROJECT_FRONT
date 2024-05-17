@@ -3,6 +3,7 @@ import styles from  './LogIn.module.css'
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import { useAppDispatch, useAppSelector } from "../../../../hooks/redux.ts";
 import { formSlice } from "../../../../store/reducers/RegistrationFormSlice.ts";
+import { LogInApi } from "../../../../api/LogIn.ts";
 
 export const LogIn: React.FC = () => {
     
@@ -13,20 +14,22 @@ export const LogIn: React.FC = () => {
     const {swap} = formSlice.actions
     const dispatch = useAppDispatch()
 
-    interface formData {
+    interface formDataProps {
         name: string;
         password: string;
     }
 
-    const [formData, setFormData] = React.useState<formData>({
+    const [formData, setFormData] = React.useState<formDataProps>({
         name: "",
         password: ""
     })
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const name = event.target.name
         const value = event.target.value
         setFormData(formData => ({...formData, [name]: value}))
     }
+
     const resetForm = () => {
         dispatch(swap())
         setFormData(prevState => ({
@@ -39,7 +42,7 @@ export const LogIn: React.FC = () => {
     return (
 
         <div className={styles.wrapper} > 
-        <div className={styles.logInCaontainer} >
+        <div className={styles.logInCaontainer} style={{opacity: toogled? '0' : '1'}}>
             <div className={styles.logIn} style = {{left: toogled ? '100%' : '0%'}}>
                 <span className= {styles.title}>Рады видеть вас!</span>
 
@@ -55,12 +58,12 @@ export const LogIn: React.FC = () => {
 
                 <span className={styles.logInLink} onClick={() => resetForm()}>Зарегестрироваться</span>
 
-                <button className={styles.logInBtn}>Войти</button>
+                <button className={styles.logInBtn} onClick={() => LogInApi(formData)}>Войти</button>
             </div>
         </div>   
 
             <div className={styles.toogleMenu}>
-                <div className={styles.toogle} style = {{right: toogled ? '100%' : '0%'} }>
+                <div className={styles.toogle} style = {{left: toogled ? '100%' : '0%', opacity: toogled ? '0' : '1'}}>
                 </div>
             </div>
 

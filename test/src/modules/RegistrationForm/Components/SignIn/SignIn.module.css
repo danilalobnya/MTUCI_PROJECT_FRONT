@@ -19,6 +19,7 @@
 
 .logInCaontainer {
     overflow: hidden;
+    transition: 1s ease;
 }
 
 
