@@ -1,16 +1,14 @@
 import axios from 'axios'
 
-export interface AuthApiProps {
-    Data: {
+export interface LogInApiProps {
         name: string
         password: string
-    }
 }
 
-export const AuthApi = (props: AuthApiProps) => {
-    axios.post('api/token/refresh/', {
-        name: props.Data.name,
-        password: props.Data.password,
+export const LogInApi = (props: LogInApiProps) => {
+    axios.post('api/token/refresh', {
+        name: props.name,
+        password: props.password,
     })
     .then(response => {
         if (response.status === 200) return 

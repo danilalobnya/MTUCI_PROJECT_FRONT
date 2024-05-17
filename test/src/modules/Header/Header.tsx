@@ -11,7 +11,6 @@ export const Header: React.FC = () => {
 
 
 
-
     return (
     
         
@@ -19,7 +18,7 @@ export const Header: React.FC = () => {
         <div className = {styles.wrapper} >
             <HeaderLogo/>
             <PagesIcons/>
-            <NotAuthUserMenu/>
+            {localStorage.getItem('access') ? <UserMenu/> : <NotAuthUserMenu/>}
         </div>
 
     )

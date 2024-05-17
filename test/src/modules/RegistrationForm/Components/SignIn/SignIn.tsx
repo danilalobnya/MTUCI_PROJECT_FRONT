@@ -4,6 +4,7 @@ import styles from  './SignIn.module.css'
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import { useAppDispatch, useAppSelector } from "../../../../hooks/redux.ts";
 import { formSlice } from "../../../../store/reducers/RegistrationFormSlice.ts";
+import { AuthApi } from "../../../../api/Auth.ts";
 
 
 export const SignIn: React.FC = () => {
@@ -16,14 +17,14 @@ export const SignIn: React.FC = () => {
     const {swap} = formSlice.actions
     const dispatch = useAppDispatch()
 
-    interface formData {
+    interface formDataProps {
         name: string;
         email: string;
         password: string;
         password2: string;
     }
 
-    const [formData, setFormData] = React.useState<formData>({
+    const [formData, setFormData] = React.useState<formDataProps>({
         name: "",
         email: "",
         password: "",
@@ -54,8 +55,7 @@ export const SignIn: React.FC = () => {
         <div className={styles.wrapper} style = {{position: 'absolute'}}> 
 
             <div className={styles.toogleMenu} style = {{opacity: toogled ? '1' : '0'}}>
-                <div className={styles.toogle} style = {{right: toogled ? '0%' : '100%'}}>
-                </div>
+                <div className={styles.toogle} style = {{right: toogled ? '0%' : '100%'}}/>
             </div>
 
         <div className={styles.logInCaontainer} style={{opacity: toogled ? '1' : '0'}}>
@@ -73,7 +73,7 @@ export const SignIn: React.FC = () => {
                     type = "password" placeholder="Repeat Password"></input>
                 </div>
                 <span className={styles.logInLink} onClick={() => resetForm()}>Уже есть аккаунт?</span>
-                <button className={styles.logInBtn}>Создать</button>
+                <button className={styles.logInBtn} onClick={() => AuthApi(formData)}>Создать</button>
             </div>к
         </div>   
 

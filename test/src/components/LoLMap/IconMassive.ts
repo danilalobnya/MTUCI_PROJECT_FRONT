@@ -49,13 +49,13 @@ export const IconMassive: MyMass[] = [
      {
         role: 'sup',
         red: true,
-        top: '50%',
-        left:'6%'
+        top: '65%',
+        left:'11%'
      },
      {
         role: 'sup',
         red: false,
         top: '78%',
-        left:'25%'
+        left:'23%'
      },
 ]

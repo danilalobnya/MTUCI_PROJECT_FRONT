@@ -11,8 +11,8 @@ export const UserMenu: React.FC = () => {
     
             <div className = {styles.userMenuContainer}>
                 <div className={styles.avatar}/>
-                <div className={styles.userLevel}><text>12</text></div>
-                {Boop({rotation: 180, timing: 400, children: <RiSettings3Fill className={styles.settingBtn}></RiSettings3Fill >})}
+                <div className={styles.userLevel}><text>{lvl ? lvl : '?'}</text></div>
+                {Boop({rotation: 30, timing: 200, children: <RiSettings3Fill className={styles.settingBtn}></RiSettings3Fill >})}
             </div>
 
     )
