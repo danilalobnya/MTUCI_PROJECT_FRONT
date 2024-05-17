@@ -1,11 +1,10 @@
 import React from 'react';
 import './Carousel.css';
 import { Card, CardBody, CardFooter, Image, Divider, Text, Heading, Stack } from '@chakra-ui/react';
-import Logo from './images_static/Logo.jpeg';
-import login from './images_static/login.jpeg';
-import slavik from './images_static/Slava.jpeg';
-import eva from './images_static/Elfi.jpeg'
+import img1 from '../../ui/Images/Rectangle 61.png'
 import Flickity from 'react-flickity-component';
+import { useContext } from 'react';
+
 
 let flickityOptions = {
     wrapAround: true,
@@ -16,11 +15,11 @@ let flickityOptions = {
 const papers = {
   id: [1, 2, 3, 4],
   tit: ['login', 'Logo', 'search'],
-  image: [Logo, login, slavik, eva]
+  image: [img1, img1, img1, img1]
 }
 
 
-export default function News() {
+export const News: React.FC = () =>{
   return (
     <Flickity 
       className="Slider"

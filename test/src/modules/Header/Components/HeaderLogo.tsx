@@ -10,7 +10,7 @@ export const HeaderLogo: React.FC = () => {
 
     return (
     
-            <div className = {styles.logoContainer} onClick={() => redirect('http://localhost:3000/LoL')}>
+            <div className = {styles.logoContainer} onClick={() => redirect('http://localhost:3000/Main')}>
                 <img className= {styles.logo} alt = 'logo.png' src={logo}/>
                 <img className= {styles.title} alt = 'logo.png' src={title}/>
             </div>
