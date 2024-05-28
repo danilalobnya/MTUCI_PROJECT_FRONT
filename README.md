@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinge
 Upskill-первая в мире онлайн-платформа для обучения двум ведущим MOBA дисциплинам: DOTA2 и League of Legends
 
-## Featur
+## Feature
 На нашем сейте есть возможность пройти различные по уровню погружения в игровые аспекты курсы по DOTA2 и LoL как в текстовом, так и в видеоформате.
 ## Tech
 
